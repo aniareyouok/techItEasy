@@ -1,3 +1,10 @@
+//FUNCTIONS
+
+//Opdr 1 How many items to sell
+//adding every value at originalStock of the inventory array with a loop wil give us the number of items to sell
+//let number = 0; number + [i]; return number = const totalItemsToSell
+
+
 // VOORRAAD ARRAY MET TV'S
 const inventory = [
   {
@@ -161,3 +168,24 @@ const inventory = [
     sold: 8,
   },
 ];
+
+
+
+
+function totalStockCounter() {
+  let stockArray = inventory.map((item) => {
+     return item.originalStock - item.sold;
+  });
+
+  let totalStock = 0;
+  for (let i = 0; i < stockArray.length; i++) {
+    totalStock = totalStock + stockArray[i];
+  }
+  return totalStock;
+}
+
+totalStockCounter();
+
+document.getElementById("stock").innerHTML = totalStockCounter();
+
+console.log("Gebeurt er iets?")
