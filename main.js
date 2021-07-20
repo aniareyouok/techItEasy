@@ -1,10 +1,3 @@
-//FUNCTIONS
-
-//Opdr 1 How many items to sell
-//adding every value at originalStock of the inventory array with a loop wil give us the number of items to sell
-//let number = 0; number + [i]; return number = const totalItemsToSell
-
-
 // VOORRAAD ARRAY MET TV'S
 const inventory = [
   {
@@ -169,9 +162,10 @@ const inventory = [
   },
 ];
 
+//FUNCTIONS
 
 
-
+//1. counts the total number of items to sell --------------------------
 function totalStockCounter() {
   let stockArray = inventory.map((item) => {
      return item.originalStock - item.sold;
@@ -186,6 +180,78 @@ function totalStockCounter() {
 
 totalStockCounter();
 
+//returns the result to index.html
 document.getElementById("stock").innerHTML = totalStockCounter();
 
+//2a. array of all type names -------------------------------------------
+const typeNames = inventory.map((item) => {
+  return item.name;
+});
+
+//2b. array of all sold-out items ---------------------------------------
+const soldOut = inventory.filter((item) => {
+return (item.originalStock - item.sold) === 0;
+});
+
+//2c. array of all items with AmbiLight --------------------------------
+const hasAmbi = inventory.filter((item) => {
+  return item.options.ambiLight === true;
+});
+
+
+//2d. array of all items listed from lowest to highest price -----------
+const lowestToHighestPrice = inventory.sort((a, b) => {
+  return b.price - a.price;
+});
+
+//3a. Target: Amount when all is sold-out ------------------------------
+function target() {
+  const targetPerItem = inventory.map((item) => {
+    return item.originalStock * item.price;
+  });
+
+  let targetCounter = 0;
+  for (let i = 0; i < targetPerItem.length; i++) {
+    targetCounter = targetCounter + targetPerItem[i];
+  }
+  return targetCounter;
+}
+
+//returns the result to index.html
+document.getElementById("target").innerHTML = target();
+
+//3b. Counter: Current amount sold --------------------------------------
+function sold() {
+  const totalAmountSoldPerItem = inventory.map((item) => {
+    return (item.originalStock - item.sold) * item.price;
+  });
+
+  let counter = 0;
+  for (let i = 0; i < totalAmountSoldPerItem.length; i++) {
+    counter = counter + totalAmountSoldPerItem[i];
+  }
+  return counter;
+}
+//returns the result to index.html
+document.getElementById("sold").innerHTML = sold();
+
+//4. shows to type names ------------------------------------------------
+
+
+//5a --------------------------------------------------------------------
+
+//5b --------------------------------------------------------------------
+
+//5c --------------------------------------------------------------------
+
+//5d --------------------------------------------------------------------
+
+//5e --------------------------------------------------------------------
+
+//Extra: Three buttons (soort by price, ambi lght TV's, sold out items)--
+
+
+
+
+//test
 console.log("Gebeurt er iets?")

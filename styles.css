@@ -1,6 +1,23 @@
 /*class of how many items to sell function*/
 .totalStockCounter {
     font-style: normal;
-    color: red;
+    color: darkred;
   }
 
+.target {
+    font-style: normal;
+    color: dodgerblue;
+}
+
+.target:after {
+    content: '\20AC';
+}
+
+.sold {
+    font-style: normal;
+    color: forestgreen;
+}
+
+.sold:after {
+    content: '\20AC';
+}
