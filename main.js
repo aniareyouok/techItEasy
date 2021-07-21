@@ -245,6 +245,17 @@ document.getElementById("inTheSpotLightsTwo").innerHTML = typeNameTwo;
 
 //5a function shows brand, type and name of one item as string ----------
 
+function itemName() {
+let itemName = inventory.map((item) => {
+  return item.brand + " " + item.type + " - " + item.name;
+});
+return itemName[Math.floor(Math.random()*itemName.length)];
+}
+itemName();
+
+//returns result to index.html
+document.getElementById("itemNameOne").innerHTML = itemName();
+
 //5b function shows the price of one item as string with euro sign ------
 
 //5c function calculates inches to cm and shows screen-sizes as string --
@@ -256,7 +267,13 @@ document.getElementById("inTheSpotLightsTwo").innerHTML = typeNameTwo;
 
 //Extra: Three buttons (soort by price, ambi lght TV's, sold out items)--
 
+function addButton() {
+  document.getElementById("LowToHigh").addEventListener('click', lowestToHighestPrice);
+  document.getElementById("ambiLight").addEventListener('click', hasAmbi);
+  document.getElementById("soldOut").addEventListener('click', soldOut);
+}
 
+addButton();
 
 
 

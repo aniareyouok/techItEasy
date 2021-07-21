@@ -33,11 +33,23 @@
     height: fit-content;
     background-color: orange;
     font-style: normal; color: orangered;
-    font-size: 22px;
+    font-size: 14px;
     margin: 10px;
     padding: 20px;
     /*justify-content: center;*/
     /*align-items: center;*/
+}
+
+/*highlighting one product, in box (randomly chosen)*/
+.items {
+    flex: content-box;
+    width: fit-content;
+    height: fit-content;
+    background-color: deeppink;
+    font-style: normal; color: purple;
+    font-size: 14px;
+    margin: 10px;
+    padding: 20px;
 }
 
 
