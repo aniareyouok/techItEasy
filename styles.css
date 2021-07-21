@@ -25,3 +25,20 @@
 #sold:after {
     content: '\20AC';
 }
+
+/*highlighting two types, in box*/
+.spotLights {
+    flex: content-box;
+    width: 280px;
+    height: fit-content;
+    background-color: orange;
+    font-style: normal; color: orangered;
+    font-size: 22px;
+    margin: 10px;
+    padding: 20px;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+
+

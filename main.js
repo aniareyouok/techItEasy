@@ -239,39 +239,24 @@ document.getElementById("soldCounter").innerHTML = sold();
 const typeNameOne = inventory[0].name;
 const typeNameTwo = inventory[1].name;
 
-//test
-console.log(typeNameOne + " & " + typeNameTwo);
-
 //returns the result to index.html
 document.getElementById("inTheSpotLightsOne").innerHTML = typeNameOne;
 document.getElementById("inTheSpotLightsTwo").innerHTML = typeNameTwo;
 
-//5a --------------------------------------------------------------------
+//5a function shows brand, type and name of one item as string ----------
 
-//5b --------------------------------------------------------------------
+//5b function shows the price of one item as string with euro sign ------
 
-//5c --------------------------------------------------------------------
+//5c function calculates inches to cm and shows screen-sizes as string --
 
-//5d --------------------------------------------------------------------
+//5d using function a, b and c to present one item in box ---------------
 
-//5e --------------------------------------------------------------------
+//5e tv generator functie -----------------------------------------------
+
 
 //Extra: Three buttons (soort by price, ambi lght TV's, sold out items)--
 
 
-// function getTvInfos (tvObjects) {
-//   let tvInfos = ""
-//   for (const tv of tvObjects) {
-//     const name = getTvString(tv)
-//     const price = getTvPriceString(tv.price)
-//     const size = getTvSizeString(tv.availableSizes)
-//     tvInfos += `${name}\n${price}\n${size}\n\n`
-//   }
-//   return tvInfos
-// }
-// const TvInfos = getTvInfos(inventory)
-// const allTvStrings = document.getElementById("tvs")
-// allTvStrings.textContent = TvInfos
 
 
 
