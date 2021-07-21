@@ -181,7 +181,7 @@ function totalStockCounter() {
 totalStockCounter();
 
 //returns the result to index.html
-document.getElementById("stock").innerHTML = totalStockCounter();
+document.getElementById("stockCounter").innerHTML = totalStockCounter();
 
 //2a. array of all type names -------------------------------------------
 const typeNames = inventory.map((item) => {
@@ -218,7 +218,7 @@ function target() {
 }
 
 //returns the result to index.html
-document.getElementById("target").innerHTML = target();
+document.getElementById("targetCounter").innerHTML = target();
 
 //3b. Counter: Current amount sold --------------------------------------
 function sold() {
@@ -233,10 +233,18 @@ function sold() {
   return counter;
 }
 //returns the result to index.html
-document.getElementById("sold").innerHTML = sold();
+document.getElementById("soldCounter").innerHTML = sold();
 
 //4. shows to type names ------------------------------------------------
+const typeNameOne = inventory[0].name;
+const typeNameTwo = inventory[1].name;
 
+//test
+console.log(typeNameOne + " & " + typeNameTwo);
+
+//returns the result to index.html
+document.getElementById("inTheSpotLightsOne").innerHTML = typeNameOne;
+document.getElementById("inTheSpotLightsTwo").innerHTML = typeNameTwo;
 
 //5a --------------------------------------------------------------------
 
@@ -250,6 +258,20 @@ document.getElementById("sold").innerHTML = sold();
 
 //Extra: Three buttons (soort by price, ambi lght TV's, sold out items)--
 
+
+// function getTvInfos (tvObjects) {
+//   let tvInfos = ""
+//   for (const tv of tvObjects) {
+//     const name = getTvString(tv)
+//     const price = getTvPriceString(tv.price)
+//     const size = getTvSizeString(tv.availableSizes)
+//     tvInfos += `${name}\n${price}\n${size}\n\n`
+//   }
+//   return tvInfos
+// }
+// const TvInfos = getTvInfos(inventory)
+// const allTvStrings = document.getElementById("tvs")
+// allTvStrings.textContent = TvInfos
 
 
 

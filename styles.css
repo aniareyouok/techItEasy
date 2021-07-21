@@ -1,23 +1,27 @@
-/*class of how many items to sell function*/
-.totalStockCounter {
+/*how many items yet to sell, number should be red*/
+#stock {
     font-style: normal;
     color: darkred;
   }
 
-.target {
+/*target amount to reach when sold out, number should be blue*/
+#target {
     font-style: normal;
     color: dodgerblue;
 }
 
-.target:after {
+/*adding euro sign after number*/
+#target:after {
     content: '\20AC';
 }
 
-.sold {
+/*current amount sold, number should be green*/
+#sold {
     font-style: normal;
     color: forestgreen;
 }
 
-.sold:after {
+/*adding euro sign after number*/
+#sold:after {
     content: '\20AC';
 }
