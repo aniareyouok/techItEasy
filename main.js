@@ -248,45 +248,46 @@ document.getElementById("inTheSpotLightsTwo").innerHTML = typeNameTwo;
 
 let randomItem = inventory[Math.floor(Math.random() * inventory.length)];
 
-function itemName() {
-    return randomItem.brand + " " + randomItem.type + " - " + randomItem.name;
+function itemName(item) {
+    return item.brand + " " + item.type + " - " + item.name;
 }
 
-itemName();
-
 //returns result to index.html
-document.getElementById("itemName").innerHTML = itemName();
+document.getElementById("itemName").innerHTML = itemName(randomItem);
 
 //5b function shows the price of one item as string with euro sign ------
 
-function itemPrice() {
-    return "€" + randomItem.price + ",-";
+function itemPrice(item) {
+    return "€" + item.price + ",-";
 }
 
-itemPrice();
-
 //returns result to index.html
-document.getElementById("itemPrice").innerHTML = itemPrice();
+document.getElementById("itemPrice").innerHTML = itemPrice(randomItem);
 
 //5c function calculates inches to cm and shows screen-sizes as string --
-function screenSizeInCm() {
-    const sizes = randomItem.availableSizes.map((size) => {
+function screenSizeInCm(item) {
+    const sizes = item.availableSizes.map((size) => {
         return size + " inch (" + size * 2.54 + " cm)";
     });
     return sizes.join(" | ");
 }
 
-screenSizeInCm();
-
 //returns result to index.html
-document.getElementById("screenSize").innerHTML = screenSizeInCm();
+document.getElementById("screenSize").innerHTML = screenSizeInCm(randomItem);
 
 
 //5d using function a, b and c to present one item in box ---------------
-//allready did this using document.getElementById and referring to elementId and the function
+//already did this using document.getElementById and referring to elementId and the function
 
-//5e tv generator functi -----------------------------------------------
+//5e tv generator function -----------------------------------------------
+function allProducts(list) {
+    const products = list.map((item) => {
+        return '<div class="block">' + itemName(item) + '<br>' + itemPrice(item) + '<br>' + screenSizeInCm(item) +'</div>'
+    }); return products.join(" ");
+}
 
+//returns result to index.html
+document.getElementById("allProducts").innerHTML = allProducts(inventory);
 
 //Extra: Three buttons (soort by price, ambi lght TV's, sold out items)--
 

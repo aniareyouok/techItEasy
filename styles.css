@@ -1,18 +1,24 @@
 body {
-    background-color: lightyellow;
+    background-color: yellow;
 }
 
-#counter {
+h3 {
+    margin: 10px;
+    font-family: "Lucida Sans Typewriter";
+    color: deeppink;
+}
+
+.counters {
     flex: content-box;
     color: lightyellow;
-    font-size: 48px;
+    font-size: 24px;
+    font-family: "Lucida Sans Typewriter";
     margin: 10px;
-    padding: 20px;
 }
 
 /*how many items yet to sell, number should be red*/
 #stock {
-    color: darkred;
+    color: red;
   }
 
 /*target amount to reach when sold out, number should be blue*/
@@ -35,32 +41,29 @@ body {
     content: '€';
 }
 
-/*highlighting two types, in box*/
-.spotLights {
-    display: flex;
+/*creating a default block for size and positioning*/
+.block {
     flex: content-box;
     width: 280px;
     height: fit-content;
-    background-color: orange;
-    font-style: normal; color: orangered;
-    font-size: 14px;
+    background-color: dimgrey;
+    color: black;
     margin: 10px;
     padding: 20px;
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    font-size: 14px;
+}
+/*highlighting two types, in box*/
+.spotLights {
+    background-color: orange;
+    color: saddlebrown;
+    font-weight: bold;
 }
 
 /*highlighting one product, in box (randomly chosen)*/
 .items {
-    display: flex;
-    flex: content-box;
-    width: 280px;
-    height: fit-content;
     background-color: deeppink;
-    font-style: normal; color: purple;
-    font-size: 14px;
-    margin: 10px;
-    padding: 20px;
+    color: purple;
+    font-weight: bold;
 }
 
 
