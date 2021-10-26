@@ -6,34 +6,28 @@
     <title>Tech It Easy Dashboard</title>
 </head>
 <body>
+gi
+    <div class="counters" id="counter">
+        <div class="totalStockCounter" id="stock"> Items on stock: <span id="stockCounter">0</span></div>
+        <div class="targetAmount" id="target"> Target: <span id="targetCounter">0 </span></div>
+        <div class="totalSold" id="sold"> Sold so far: <span id="soldCounter">0 </span></div>
+    </div>
 
-    <h3>
-        <div class="totalStockCounter" id="stock"> Items on stock: <span id="stockCounter">0</span> </div>
-    </h3>
-    <h3>
-        <div class="targetAmount" id="target"> Target: <span id="targetCounter">0 </span> </div>
-    </h3>
-    <h3>
-        <div class="totalSold" id="sold"> Sold so far: <span id="soldCounter">0 </span> </div>
-    </h3>
+<div class="spotLights" id="spot"> In the spotlights today: <br>
+    <span id="inTheSpotLightsOne"></span> <br>
+    <span id="inTheSpotLightsTwo"></span> <br>
+</div>
 
-    <p>
-        <div class="spotLights" id="spot"> In the spotlights today: <br>
-        <span id="inTheSpotLightsOne"></span> <br>
-        <span id="inTheSpotLightsTwo"></span> <br>
-        </div>
-    </p>
+<div class="items" id="item"> Best offer at this moment: <br>
+    <div class="itemName" id="itemName"><span id="name"></span></div>
+    <div class="itemPrice" id="itemPrice"><span id="price">0</span></div>
+    <div class="screenSizes" id="screenSize"><span id="size"></span></div>
+</div>
 
-    <p>
-        <div class="items" id="item"> Best offer at this moment: <br>
-        <span id="itemNameOne"></span> <br>
-        </div>
-    </p>
-
-    <h3>Sort products by:</h3>
-        <button class="button" id="LowToHigh">Price (low-high) </button>
-        <button class="button" id="ambiLight">Ambilight</button>
-        <button class="button" id="soldOut">Sold Out</button>
+<h3>Sort products by:</h3>
+<button class="button" id="LowToHigh">Price (low-high)</button>
+<button class="button" id="ambiLight">Ambilight</button>
+<button class="button" id="soldOut">Sold Out</button>
 
 <script src="main.js" type="text/javascript"></script>
 </body>

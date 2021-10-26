@@ -1,33 +1,43 @@
+body {
+    background-color: lightyellow;
+}
+
+#counter {
+    flex: content-box;
+    color: lightyellow;
+    font-size: 48px;
+    margin: 10px;
+    padding: 20px;
+}
+
 /*how many items yet to sell, number should be red*/
 #stock {
-    font-style: normal;
     color: darkred;
   }
 
 /*target amount to reach when sold out, number should be blue*/
 #target {
-    font-style: normal;
     color: dodgerblue;
 }
 
 /*adding euro sign after number*/
 #target:after {
-    content: '\20AC';
+    content: '€';
 }
 
 /*current amount sold, number should be green*/
 #sold {
-    font-style: normal;
     color: forestgreen;
 }
 
 /*adding euro sign after number*/
 #sold:after {
-    content: '\20AC';
+    content: '€';
 }
 
 /*highlighting two types, in box*/
 .spotLights {
+    display: flex;
     flex: content-box;
     width: 280px;
     height: fit-content;
@@ -42,8 +52,9 @@
 
 /*highlighting one product, in box (randomly chosen)*/
 .items {
+    display: flex;
     flex: content-box;
-    width: fit-content;
+    width: 280px;
     height: fit-content;
     background-color: deeppink;
     font-style: normal; color: purple;
@@ -51,6 +62,7 @@
     margin: 10px;
     padding: 20px;
 }
+
 
 
 
