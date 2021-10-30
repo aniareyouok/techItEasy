@@ -188,18 +188,25 @@ const typeNames = inventory.map((item) => {
     return item.name;
 });
 
-//2b. array of all sold-out items ---------------------------------------
-const soldOut = inventory.filter((item) => {
-    return (item.originalStock - item.sold) === 0;
-});
+//2b. array of all sold-out items (in a function that is called when the
+// sold-out button is clicked. The buttons are to be found at the Bonus exercise)
+function soldOut() {
+    const soldOut = inventory.filter((item) => {
+        return (item.originalStock - item.sold) === 0;
+    }); return document.getElementById("allProducts").innerHTML = allProducts(soldOut);
+}
 
-//2c. array of all items with AmbiLight --------------------------------
-const hasAmbi = inventory.filter((item) => {
-    return item.options.ambiLight === true;
-});
+//2c. array of all items with AmbiLight (in a function that is called when the
+// hasAmbi button is clicked. The buttons are to be found at the Bonus exercise)
+function hasAmbi() {
+    const hasAmbi = inventory.filter((item) => {
+        return item.options.ambiLight === true;
+    });
+    document.getElementById("allProducts").innerHTML = allProducts(hasAmbi);
+}
 
-
-//2d. array of all items listed from lowest to highest price -----------
+//2d. array of all items listed from lowest to highest price (in a function that is called
+//when low to high button is clicked. The buttons are to be found at the Bonus exercise)
 function lowestToHighestPrice() {
     const lowestToHighestPrice = inventory.sort((a, b) => {
         return a.price - b.price;
@@ -291,10 +298,13 @@ function allProducts(list) {
 document.getElementById("allProducts").innerHTML = allProducts(inventory);
 
 //Extra: Three buttons (soort by price, ambi lght TV's, sold out items)--
+//The lowestToHighestPrice function is the same as in exercise 2d
+//The hasAmbi function is the same as in exercise 2c
+//The soldOut function is the same as in exercise 2b
 
 document.getElementById("LowToHigh-button").addEventListener("click", lowestToHighestPrice);
-// document.getElementById("ambiLight-button").addEventListener("click", hasAmbi);
-// document.getElementById("soldOut-button").addEventListener("click", soldOut);
+document.getElementById("ambiLight-button").addEventListener("click", hasAmbi);
+document.getElementById("soldOut-button").addEventListener("click", soldOut);
 
 //test
 console.log("Gebeurt er iets?")
