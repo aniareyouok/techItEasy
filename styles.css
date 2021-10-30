@@ -66,6 +66,29 @@ h3 {
     font-weight: bold;
 }
 
+.container {
+    margin: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px;
+    border: none;
+}
+
+#LowToHigh-button {
+    background-color: deeppink;
+}
+
+#ambiLight-button {
+    background-color: darkturquoise;
+}
+
+#soldOut-button {
+    background-color: mediumpurple;
+}
 
 
 

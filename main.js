@@ -200,10 +200,11 @@ const hasAmbi = inventory.filter((item) => {
 
 
 //2d. array of all items listed from lowest to highest price -----------
-const lowestToHighestPrice = inventory.sort((a, b) => {
-    return b.price - a.price;
-});
-
+function lowestToHighestPrice() {
+    const lowestToHighestPrice = inventory.sort((a, b) => {
+        return a.price - b.price;
+     }); return document.getElementById("allProducts").innerHTML = allProducts(lowestToHighestPrice);
+}
 //3a. Target: Amount when all is sold-out ------------------------------
 function target() {
     const targetPerItem = inventory.map((item) => {
@@ -277,7 +278,7 @@ document.getElementById("screenSize").innerHTML = screenSizeInCm(randomItem);
 
 
 //5d using function a, b and c to present one item in box ---------------
-//already did this using document.getElementById and referring to elementId and the function
+//already did this in 5a, b and c
 
 //5e tv generator function -----------------------------------------------
 function allProducts(list) {
@@ -291,14 +292,9 @@ document.getElementById("allProducts").innerHTML = allProducts(inventory);
 
 //Extra: Three buttons (soort by price, ambi lght TV's, sold out items)--
 
-function addButton() {
-    document.getElementById("LowToHigh").addEventListener('click', lowestToHighestPrice);
-    document.getElementById("ambiLight").addEventListener('click', hasAmbi);
-    document.getElementById("soldOut").addEventListener('click', soldOut);
-}
-
-addButton();
-
+document.getElementById("LowToHigh-button").addEventListener("click", lowestToHighestPrice);
+// document.getElementById("ambiLight-button").addEventListener("click", hasAmbi);
+// document.getElementById("soldOut-button").addEventListener("click", soldOut);
 
 //test
 console.log("Gebeurt er iets?")
