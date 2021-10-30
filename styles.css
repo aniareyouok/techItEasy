@@ -1,13 +1,32 @@
+/*by using border-box, the padding is included in the width */
+* {
+    box-sizing: border-box;
+}
+
+/*background color*/
 body {
     background-color: yellow;
 }
 
+/*the main title of the site*/
+h1 {
+    margin: 10px;
+    font-family: "Bauhaus 93";
+    color: deeppink;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+
+/*all headlines but the title are h3*/
 h3 {
     margin: 10px;
     font-family: "Lucida Sans Typewriter";
     color: deeppink;
 }
 
+/*the three counters at the top of the site are
+in a container called counters*/
 .counters {
     flex: content-box;
     color: lightyellow;
@@ -44,7 +63,7 @@ h3 {
 /*creating a default block for size and positioning*/
 .block {
     flex: content-box;
-    width: 280px;
+    width: 300px;
     height: fit-content;
     background-color: dimgrey;
     color: black;
@@ -66,28 +85,35 @@ h3 {
     font-weight: bold;
 }
 
+/*container for buttons to adjust positioning*/
 .container {
     margin: 10px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
+/*all buttons have class name button*/
 .button {
     padding: 10px;
-    border: none;
+    border-radius: 15px;
 }
 
 #LowToHigh-button {
     background-color: deeppink;
+    border: deeppink;
 }
 
 #ambiLight-button {
     background-color: darkturquoise;
+    border: darkturquoise;
 }
 
 #soldOut-button {
     background-color: mediumpurple;
+    border: mediumpurple;
 }
 
 

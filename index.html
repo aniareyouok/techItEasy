@@ -6,6 +6,12 @@
     <title>Tech It Easy Dashboard</title>
 </head>
 <body>
+
+<!--title-->
+<h1>Welcome to <br> Tech It Easy <br> TV Inventory <br> Dashboard</h1>
+<br>
+
+<!--Counters showing number of products on stock, target in euros and total amount sold in euros-->
 <div class="counters" id="counter">
     <div class="totalStockCounter" id="stock"> Items on stock: <span id="stockCounter">0</span></div>
     <div class="targetAmount" id="target"> Target: <span id="targetCounter">0 </span></div>
@@ -13,6 +19,7 @@
 </div>
 <br>
 
+<!--Two products are shown-->
 <h3>In the spotlights today: </h3>
 <div class="spotLights block" id="spot">
     <span id="inTheSpotLightsOne"></span> <br>
@@ -20,6 +27,7 @@
 </div>
 <br>
 
+<!--Random product is shown-->
 <h3>Best offer at this moment:</h3>
 <div class="items block" id="item">
     <div class="itemName" id="itemName"><span id="name"></span></div>
@@ -28,18 +36,17 @@
 </div>
 <br>
 
-<h3>All our products: </h3>
-<div class="products" id="allProducts">
-</div>
-
+<!--Buttons to sort list of products or show specifiek products-->
 <h3>Sort products by:</h3>
 <div class="container" id="button-container">
-<button class="button" id="LowToHigh-button">Price (low-high)</button>
-<button class="button" id="ambiLight-button">AmbiLight</button>
-<button class="button" id="soldOut-button">Sold Out</button>
+    <button class="button" id="LowToHigh-button">Price (low-high)</button>
+    <button class="button" id="ambiLight-button">AmbiLight</button>
+    <button class="button" id="soldOut-button">Sold Out</button>
 </div>
 
-
+<!--List of products (depended on which button is pressed)-->
+<div class="products" id="allProducts">
+</div>
 
 <script src="main.js" type="text/javascript"></script>
 </body>
