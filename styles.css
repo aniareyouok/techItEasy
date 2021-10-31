@@ -95,7 +95,7 @@ in a container called counters*/
     justify-content: space-evenly;
 }
 
-/*all buttons have class name button*/
+/*all buttons have class-name button*/
 .button {
     padding: 10px;
     border-radius: 15px;

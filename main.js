@@ -175,10 +175,8 @@ function totalStockCounter() {
     for (let i = 0; i < stockArray.length; i++) {
         totalStock = totalStock + stockArray[i];
     }
-    return totalStock;
+    return totalStock.toString();
 }
-
-totalStockCounter();
 
 //returns the result to index.html
 document.getElementById("stockCounter").innerHTML = totalStockCounter();
@@ -193,7 +191,8 @@ const typeNames = inventory.map((item) => {
 function soldOut() {
     const soldOut = inventory.filter((item) => {
         return (item.originalStock - item.sold) === 0;
-    }); return document.getElementById("allProducts").innerHTML = allProducts(soldOut);
+    });
+    return document.getElementById("allProducts").innerHTML = allProducts(soldOut);
 }
 
 //2c. array of all items with AmbiLight (in a function that is called when the
@@ -210,8 +209,10 @@ function hasAmbi() {
 function lowestToHighestPrice() {
     const lowestToHighestPrice = inventory.sort((a, b) => {
         return a.price - b.price;
-     }); return document.getElementById("allProducts").innerHTML = allProducts(lowestToHighestPrice);
+    });
+    return document.getElementById("allProducts").innerHTML = allProducts(lowestToHighestPrice);
 }
+
 //3a. Target: Amount when all is sold-out ------------------------------
 function target() {
     const targetPerItem = inventory.map((item) => {
@@ -222,7 +223,7 @@ function target() {
     for (let i = 0; i < targetPerItem.length; i++) {
         targetCounter = targetCounter + targetPerItem[i];
     }
-    return targetCounter;
+    return targetCounter.toString();
 }
 
 //returns the result to index.html
@@ -238,7 +239,7 @@ function sold() {
     for (let i = 0; i < totalAmountSoldPerItem.length; i++) {
         counter = counter + totalAmountSoldPerItem[i];
     }
-    return counter;
+    return counter.toString();
 }
 
 //returns the result to index.html
@@ -290,8 +291,9 @@ document.getElementById("screenSize").innerHTML = screenSizeInCm(randomItem);
 //5e tv generator function -----------------------------------------------
 function allProducts(list) {
     const products = list.map((item) => {
-        return '<div class="block">' + itemName(item) + '<br>' + itemPrice(item) + '<br>' + screenSizeInCm(item) +'</div>'
-    }); return products.join(" ");
+        return '<div class="block">' + itemName(item) + '<br>' + itemPrice(item) + '<br>' + screenSizeInCm(item) + '</div>'
+    });
+    return products.join(" ");
 }
 
 //returns result to index.html
